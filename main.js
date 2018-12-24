@@ -28,6 +28,13 @@ app.get('/update/', (req, res) => {
   })
 })
 
+app.get('*', (req, res) => {
+  res.json({
+    welcome: 'Welcome on pixtron, a (very) simple update server for electron-updater',
+    github: 'See our github here: https://github.com/ShuttleBrowser/pixtron'
+  })
+})
+
 const port = process.env.PORT || 1004;
 app.listen(port, () => {
     console.log(`http://localhost:${port}`)
