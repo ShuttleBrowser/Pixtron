@@ -19,5 +19,5 @@ read the electron-updater doc [here](https://www.electron.build/auto-update)
 
     autoUpdater.setFeedURL({
 	    provider:  'generic',
-	    url:  `http://localhost:1004/update/latest/${process.platform}/`
+	    url:  `http://your-update-server/update/latest/${process.platform}/`
     })
