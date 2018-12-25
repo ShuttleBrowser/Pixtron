@@ -9,6 +9,8 @@
   "author": "Robin Jullian",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "node-fetch": "^2.3.0",
+    "request": "^2.88.0"
   }
 }
