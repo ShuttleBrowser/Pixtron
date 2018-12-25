@@ -1,6 +1,6 @@
 # Pixtron
 
-Pixtron is a (very) simple update server for electron-updater
+Pixtron is a (very) simple update server for electron-updater.
 
 **Installation :**
 
