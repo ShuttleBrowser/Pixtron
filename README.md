@@ -2,14 +2,22 @@
 
 Pixtron is a (very) simple update server for electron-updater.
 
-**Installation :**
+## Installation
 
-    git clone https://github.com/ShuttleBrowser/pixtron.git
-    cd pixtron
-    npm i
-    npm start
+```
+# clone the repository
+$ git clone https://github.com/ShuttleBrowser/pixtron.git
 
-## **Upload release :**
+# change the working directory to pixtron
+$ cd pixtron
+
+# install the requirements
+$ npm i
+
+# start pixtron
+$ npm start
+```
+## Upload releases
 
 Copy the generated files by electron-builder in `releases/latest/<platform>`,
 
@@ -58,7 +66,7 @@ update.your-super-server.com/upload/<the release tag>/<your password (in config 
 }
 ```
 
-## Use in electron :
+## Use in electron
 
 Read the electron-updater documentation [here](https://www.electron.build/auto-update).
 
