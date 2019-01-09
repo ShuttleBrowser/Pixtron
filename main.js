@@ -99,11 +99,3 @@ const port = process.env.PORT || 1004
 app.listen(port, () => {
     console.log(`[INFO] > http://localhost:${port}`)
 })
-=======
-const port = process.env.PORT || 1004;
-app.listen(port, () => {
-    console.log(`[INFO] > http://localhost:${port}`)
-})
-
-// https://github.com/ShuttleBrowser/Shuttle/releases/download/3.0.0-beta-01/latest-linux.yml
->>>>>>> 12435c5799d540d900044dbea3ad192f23092cd0
