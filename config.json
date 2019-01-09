@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "releases": [
     {
@@ -27,4 +28,35 @@
 
   "githubRepo": "MyRepo/MySuperApp",
   "password": "mySuperPassword"
+=======
+{
+  "releases": [
+    {
+      "platform": "win32",
+      "files": [
+        "latest.yml",
+        "MySuperApp-Windows.exe",
+        "MySuperApp-Windows.exe.blockmap"
+      ]
+    },
+    {
+      "platform": "linux",
+      "files": [
+        "latest-linux.yml",
+        "MySuperApp-Linux-x86_64.AppImage"
+      ]
+    },
+    {
+      "platform": "mac",
+      "files": [
+        "latest-mac.yml",
+        "MySuperApp-MacOS.dmg",
+        "MySuperApp-MacOS.dmg.blockmap"
+      ]
+    }
+  ],
+
+  "githubRepo": "MyRepo/MySuperApp",
+  "password": "mySuperPassword"
+>>>>>>> 12435c5799d540d900044dbea3ad192f23092cd0
 }
