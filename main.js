@@ -7,15 +7,6 @@ const app = express()
 
 const config = require('./config.json')
 
-<<<<<<< HEAD
-=======
-/*
-  console.log(`${releasesURL}/${config.releases[x].files[y]}`)
-  console.log(`${__dirname}/releases/latest/${config.releases[x].platform}/${config.releases[x].files[y]}`)
-  console.log(`${releasesURL}/${config.releases[x].files[y]}`)
-*/
-
->>>>>>> 12435c5799d540d900044dbea3ad192f23092cd0
 const downloadFromGithub = (releasesURL) => {
   
   let url
