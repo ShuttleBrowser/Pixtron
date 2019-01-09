@@ -1,14 +1,16 @@
 {
-  "name": "shuttle-updater-server",
+  "name": "pixtron",
   "version": "1.0.0",
   "description": "A simple updater for electron-updater",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node main.js"
   },
   "author": "Robin Jullian",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "node-fetch": "^2.3.0",
+    "request": "^2.88.0"
   }
 }

@@ -13,11 +13,58 @@ Pixtron is a (very) simple update server for electron-updater
 
 copy the generated files by electron-builder in `releases/latest/<platform>`
 
+or
+
+In the config.json file add a password and a repository.
+Change the names of the files.
+Once it's done go to:
+
+```
+update.your-super-server.com/upload/<the release tag>/<your password (in config file)>
+```
+
+config.json :
+
+```json
+{
+  "releases": [
+    {
+      "platform": "win32",
+      "files": [
+        "latest.yml",
+        "MySuperApp-Windows.exe",
+        "MySuperApp-Windows.exe.blockmap"
+      ]
+    },
+    {
+      "platform": "linux",
+      "files": [
+        "latest-linux.yml",
+        "MySuperApp-Linux-x86_64.AppImage"
+      ]
+    },
+    {
+      "platform": "mac",
+      "files": [
+        "latest-mac.yml",
+        "MySuperApp-MacOS.dmg",
+        "MySuperApp-MacOS.dmg.blockmap"
+      ]
+    }
+  ],
+
+  "githubRepo": "MyRepo/MySuperApp",
+  "password": "mySuperPassword"
+}
+```
+
 ## Use in electron :
 
 read the electron-updater doc [here](https://www.electron.build/auto-update)
 
-    autoUpdater.setFeedURL({
-	    provider:  'generic',
-	    url:  `http://localhost:1004/update/latest/${process.platform}/`
-    })
+```js
+autoUpdater.setFeedURL({
+    provider:  'generic',
+	url:  `http://your-update-server/update/latest/${process.platform}/`
+})
+```
