@@ -99,14 +99,7 @@ app.get('*', (req, res) => {
   })
 })
 
-<<<<<<< HEAD
 const port = process.env.PORT || 1003;
 app.listen(port, () => {
     console.log(`[INFO] > http://localhost:${port}`)
 })
-=======
-const port = process.env.PORT || 1004
-app.listen(port, () => {
-    console.log(`[INFO] > http://localhost:${port}`)
-})
->>>>>>> b3edb9b5f3ea1b6482c87391ca7b09a632eb8ba5
