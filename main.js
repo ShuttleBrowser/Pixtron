@@ -7,15 +7,6 @@ const app = express()
 
 const config = require('./config.json')
 
-<<<<<<< HEAD
-=======
-/*
-  console.log(`${releasesURL}/${config.releases[x].files[y]}`)
-  console.log(`${__dirname}/releases/latest/${config.releases[x].platform}/${config.releases[x].files[y]}`)
-  console.log(`${releasesURL}/${config.releases[x].files[y]}`)
-*/
-
->>>>>>> 12435c5799d540d900044dbea3ad192f23092cd0
 const downloadFromGithub = (releasesURL) => {
   
   let url
@@ -47,7 +38,9 @@ app.get('/update/:version/:platform/:file', (req, res) => {
 app.get('/update/:version/:platform/', (req, res) => {
   fs.readdir(`${__dirname}/releases/${req.params.version}/${req.params.platform}`, (err, files) => {
     if (err) {
-      res.json(err)
+      res.json({
+        error: 'error'
+      })
     } else {
       res.json(files)
     }
@@ -57,7 +50,9 @@ app.get('/update/:version/:platform/', (req, res) => {
 app.get('/update/', (req, res) => {
   fs.readdir(`${__dirname}/releases`, (err, files) => {
     if (err) {
-      res.json(err)
+      res.json({
+        error: 'error'
+      })
     } else {
       res.json(files)
     }
@@ -76,7 +71,8 @@ app.get('/upload/:tag/:password', (req, res) => {
 
         if (data[i].name === req.params.tag) {
           res.json({
-            message: "DOWNLOADING"
+            message: "DOWNLOADING",
+            url: releasesURL
           })
 
           downloadFromGithub(releasesURL)
@@ -103,16 +99,7 @@ app.get('*', (req, res) => {
   })
 })
 
-<<<<<<< HEAD
-const port = process.env.PORT || 1004
+const port = process.env.PORT || 1003;
 app.listen(port, () => {
     console.log(`[INFO] > http://localhost:${port}`)
 })
-=======
-const port = process.env.PORT || 1004;
-app.listen(port, () => {
-    console.log(`[INFO] > http://localhost:${port}`)
-})
-
-// https://github.com/ShuttleBrowser/Shuttle/releases/download/3.0.0-beta-01/latest-linux.yml
->>>>>>> 12435c5799d540d900044dbea3ad192f23092cd0
